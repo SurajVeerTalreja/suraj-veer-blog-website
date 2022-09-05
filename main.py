@@ -25,8 +25,8 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL", "sqlite:/
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
-MY_EMAIL = os.environ["my_email"]
-PASSWORD = os.environ["password"]
+MY_EMAIL = os.environ.get("my_email")
+PASSWORD = os.environ.get("password")
 
 # Flask Login
 login_manager = LoginManager()
@@ -45,6 +45,7 @@ gravatar = Gravatar(app,
                     base_url=None)
 
 
+# smtplib send_email method
 def send_email(name, email, phone, message):
     email_msg = f"Subject: Form Contact. \n\nName: {name}" \
                 f"\nEmail: {email}"\
