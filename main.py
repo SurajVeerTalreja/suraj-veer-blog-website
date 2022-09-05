@@ -98,7 +98,7 @@ class User(UserMixin, db.Model):
 
 
 # Below code only once.
-# db.create_all()
+db.create_all()
 
 
 class BlogPost(db.Model):
@@ -121,7 +121,7 @@ class BlogPost(db.Model):
 
 
 # Below code only once.
-# db.create_all()
+db.create_all()
 
 
 # Comments Table
@@ -141,7 +141,7 @@ class Comment(db.Model):
 
 
 # Below code only once.
-# db.create_all()
+db.create_all()
 
 
 @app.route('/')
