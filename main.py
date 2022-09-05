@@ -12,6 +12,7 @@ from functools import wraps
 from dotenv import load_dotenv
 import os
 load_dotenv()  # take environment variables from .env.
+import smtplib
 
 
 app = Flask(__name__)
