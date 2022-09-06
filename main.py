@@ -247,7 +247,7 @@ def about():
 def contact_me():
     if request.method == "POST":
         data = request.form
-        send_email(data["username"], data["email"], data["phone"], data["message"])
+        send_email(data["name"], data["email"], data["phone"], data["message"])
         return render_template("contact2.html")
     return render_template("contact2.html", logged_in=current_user.is_authenticated)
 
