@@ -244,12 +244,12 @@ def about():
 
 
 @app.route("/contact", methods=["GET", "POST"])
-def contact():
+def contact_me():
     if request.method == "POST":
         data = request.form
         send_email(data["username"], data["email"], data["phone"], data["message"])
-        return render_template("contact.html")
-    return render_template("contact.html", logged_in=current_user.is_authenticated)
+        return render_template("contact2.html")
+    return render_template("contact2.html", logged_in=current_user.is_authenticated)
 
 
 @app.route("/new-post", methods=["GET", "POST"])
