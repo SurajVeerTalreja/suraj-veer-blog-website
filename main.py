@@ -244,7 +244,7 @@ def about():
 
 
 @app.route("/contact", methods=["GET", "POST"])
-def contact_me():
+def contact():
     if request.method == "POST":
         data = request.form
         send_email(data["name"], data["email"], data["phone"], data["message"])
