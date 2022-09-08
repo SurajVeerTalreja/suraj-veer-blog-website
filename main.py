@@ -217,7 +217,7 @@ def logout():
 def show_post(post_id):
     form = CommentForm()
     requested_post = BlogPost.query.get(post_id)
-    comments = Comment.query.filter_by(parent_post=post_id).first()
+    comments = Comment.query.all()
     if form.validate_on_submit():
         if current_user.is_authenticated:
             new_comment = Comment(
