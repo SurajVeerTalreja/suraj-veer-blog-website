@@ -44,6 +44,7 @@
             <!--           Comments Area -->
             <div class="col-lg-8 col-md-10 mr-auto comment">
               {% for comment in comments %}
+              {% if comment.parent_post.id == post.id %}
               <ul class="commentList">
                 <li>
                     <div class="commenterImage">
@@ -58,6 +59,7 @@
                    </div>
                 </li>
               </ul>
+              {% endif %}
               {% endfor %}
           </div>
         </div>
